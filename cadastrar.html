@@ -5,63 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-image:url(images/plano_de_fundo_cadastrar.png);
-            background-size: cover;
-        }
-        .container {
-            max-width: 400px;
-            margin: 50px auto;
-            background-color: rgba(39, 38, 29, 0.5);;
-            padding: 10px 50px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .container h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            color: white;
-        }
-
-        .form-group input {
-            width: 94%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-
-        }
-
-        .form-group button[type="submit"] {
-            background-color: #4caf50;
-            color: #fff;
-            cursor: pointer;
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .form-group button[type="submit"]:hover {
-            background-color: #45a049;
-        }
-    </style>
-
+    <link rel="stylesheet" href="css/cadastrar.css">
     <script>
         function abrirHome() {
-            window.open('index.html', '_blank');
+            window.open('index.html');
         }
 
         function verificarCampos() {
@@ -81,8 +28,8 @@
     </script>
 </head>
 
-<body>
-    <div class="container">
+<body style="background-image:url(images/plano_de_fundo_cadastrar.png);">
+    <div class="container" >
         <h2 style="color: white;">Cadastro de Usuário</h2>
         <form action="seu_script_de_processamento.php" method="post" onsubmit="return verificarCampos()">
             <div class="form-group">
