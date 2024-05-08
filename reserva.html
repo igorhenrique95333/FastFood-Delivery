@@ -7,16 +7,18 @@
     <title>Reserva - FastFood</title>
     <style>
         body {
-            font-family:"Raleway";
+            font-family: Arial, Helvetica, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f2f2f2;
+            background-color: #d6a63e;
+            background-image: url(images/PlanoDeFundoLogin.jpg);
+            background-size: cover;
         }
 
         .container {
             max-width: 600px;
             margin: 50px auto;
-            background-color: #fff;
+            background-color: rgba(0, 0, 0, 0.7);
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -29,6 +31,7 @@
         label {
             display: block;
             margin-bottom: 5px;
+            color: white;
         }
 
         input[type="text"],
@@ -60,13 +63,67 @@
         input[type="submit"]:hover {
             background-color: #45a049;
         }
+
+        .header nav a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        header nav a {
+            color: #000;
+            padding-right: 20px;
+            text-decoration: none;
+            text-align: right;
+            font-size: 20px;
+        }
+
+        header nav a:hover {
+            color: white;
+            text-decoration: underline;
+            text-decoration: none;
+        }
+
+        header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
     </style>
+
+    <script>
+        function Mensagem() {
+            var nome = document.getElementById('nome').value;
+            var telefone = document.getElementById('telefone').value;
+            var email = document.getElementById('email').value;
+            var data = document.getElementById('data').value;
+
+            if (nome === '' || telefone === '' || email === '' || data === '') {
+                alert('Por favor, preencha todos os campos.');
+                return;
+            }
+            else {
+                alert('Cadastrado Com Sucesso!');
+                return;
+            }
+
+        }
+    </script>
 
 </head>
 
 <body>
+    <header style="width: 100%;  background-color:#FFC449;height: auto;">
+        <div>
+            <nav>
+                <img src="images/Logo.png" alt="Logo" class="logo">
+                <a href="index.html" id="loginLink" class="login">Home</a>
+            </nav>
+        </div>
+    </header>
+
     <div class="container">
-        <h1>Fazer uma Reserva</h1>
+        <h1 style="color: white;">Fazer uma Reserva</h1>
         <form action="#" method="post">
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" required>
@@ -81,13 +138,13 @@
             <input type="date" id="data" name="data" required>
 
             <label for="data">Horarios Disponiveis:</label>
-            <select name="select" >
+            <select name="select">
                 <option value="valor1">18:00</option>
                 <option value="valor2" selected>19:00</option>
                 <option value="valor3">20:00</option>
             </select>
             <br>
-            <input type="submit" value="Reservar Mesa" style="margin-top: 10px;">
+            <input type="submit" value="Reservar Mesa" style="margin-top: 10px;" onclick="Mensagem()">
         </form>
     </div>
 </body>
