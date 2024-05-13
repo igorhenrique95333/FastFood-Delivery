@@ -5,92 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reserva - FastFood</title>
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #d6a63e;
-            background-image: url(images/PlanoDeFundoLogin.jpg);
-            background-size: cover;
-        }
-
-        .container {
-            max-width: 600px;
-            margin: 50px auto;
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            text-align: center;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 5px;
-            color: white;
-        }
-
-        input[type="text"],
-        input[type="email"],
-        input[type="tel"],
-        input[type="date"],
-        textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-sizing: border-box;
-        }
-
-        textarea {
-            resize: none;
-            height: 100px;
-        }
-
-        input[type="submit"] {
-            background-color: #4caf50;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #45a049;
-        }
-
-        .header nav a {
-            color: #333;
-            text-decoration: none;
-        }
-
-        header nav a {
-            color: #000;
-            padding-right: 20px;
-            text-decoration: none;
-            text-align: right;
-            font-size: 20px;
-        }
-
-        header nav a:hover {
-            color: white;
-            text-decoration: underline;
-            text-decoration: none;
-        }
-
-        header nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-    </style>
-
+    <link rel="icon" href="images/Favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/reserva.css">
     <script>
         function Mensagem() {
             var nome = document.getElementById('nome').value;
@@ -102,12 +18,9 @@
                 alert('Por favor, preencha todos os campos.');
                 return;
             }
-            else {
-                alert('Cadastrado Com Sucesso!');
-                return;
-            }
 
         }
+
     </script>
 
 </head>
@@ -144,7 +57,16 @@
                 <option value="valor3">20:00</option>
             </select>
             <br>
-            <input type="submit" value="Reservar Mesa" style="margin-top: 10px;" onclick="Mensagem()">
+            <a href="#openModal" class="btn" id="botaoReserva" type="submit" value="Reservar Mesa" style="margin-top: 10px;">Reservar Mesa</a>
+
+            <div id="openModal" class="modalDialog">
+                <div>
+                    <a href="#close" title="Close" class="close">X</a>
+                    <h2>Reserva Feita com Sucesso!</h2>
+                    <p>Obrigado por fazer reserva em nosso restaurante</p>
+                </div>
+            </div>
+
         </form>
     </div>
 </body>

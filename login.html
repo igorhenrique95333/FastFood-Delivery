@@ -9,26 +9,18 @@
   <link rel="stylesheet" href="css/login.css">
 
   <script>
-    function abrirHome() {
-      window.open('index.html', '_blank');
-    }
-  
+
     function verificarCampos() {
-      var nome = document.getElementById('nome').value;
-      var endereco = document.getElementById('endereco').value;
-      var telefone = document.getElementById('telefone').value;
-      var email = document.getElementById('email').value;
-      var senha = document.getElementById('senha').value;
-      var confirmarSenha = document.getElementById('confirmar_senha').value;
-  
-      if (nome === '' || endereco === '' || telefone === '' || email === '' || senha === '' || confirmarSenha === '') {
+      var nome = document.getElementById('username').value;
+      var senha = document.getElementById('password').value;
+
+      if (nome === '' || senha === '') {
         alert('Por favor, preencha todos os campos.');
         return;
       }
-      abrirHome();
     }
   </script>
-  
+
 
 </head>
 
@@ -60,7 +52,9 @@
   </div>
 
 
-  <img src="images/Logo.png" alt="" style="padding-left: 610px; padding-top: 95px;">
+  <div class ="center">
+    <img src="images/Logo.png" alt="" style="padding-top: 95px;">
+  </div>
 
 
   <div class="login-container" style="z-index: 1;" id="Login">
@@ -81,8 +75,8 @@
           <option value="cliente">Cliente</option>
         </select>
         <a href="cadastrar.html" id="loginLink">Cadastrar-se</a>
-      </div>
-      <button type="submit" class="btn" onclick="verificarCampos()">Entrar</button>
+      </div >
+      <a href="index.html" class="btn" >Entrar</a>
     </form>
   </div>
 
